@@ -55,7 +55,7 @@ Eseguiamo il codice compilato sul cluster:
 
 ## Benchmarking
 
-###Strong Scaling
+### Strong Scaling
 Nella fase di strong scaling è stato testato il programma MPI utilizzando una matrice con taglia 12000x12000, variando solamente il numero di istanze e conseguentemente di processori ed utilizzando su istanze EC2 utilizzando uno StarCluster pubblico basato su ami-52a0c53b (Linux Ubuntu):
 1. N° 1 Istanza  -> 4 (3 workers) processori;
 1. N° 2 Istanze  -> 7 (6 workers) processori;
@@ -70,10 +70,10 @@ I test sono stati effettuati su questo numero di processori in quanto compatibil
 
 ![Strong Scaling](img/strong_scaling.png)
 
-####Commenti della strong scaling
+#### Commenti della strong scaling
 Come si può notare dall'immagine precedente, riguardante la strong scaling, possiamo notare come avendo fissato la grandezza della matrice all'aumentare delle istanze, e quindi dei processori, il tempo computazionale di esecuzione del programma diminuisce sempre più.
 
-###Weak Scaling
+### Weak Scaling
 Nella fase di weak scaling è stato testato il programma MPI utilizzando matrici variabile in base al numero di processori, ma mantenendo costate la grandezza di matrice inviata ad ogni processore, in questo caso matrici 400x400 ad ogni processore. Sono state utilizzate sempre EC2 utilizzando uno StarCluster pubblico basato su ami-52a0c53b (Linux Ubuntu):
 1. N°1 Istanza -> grandezza matrice 1200x1200 -> 4 (3 workers) processori;
 1. N°2 Istanza -> grandezza matrice 2400x2400 -> 7 (6 workers) processori;
@@ -88,7 +88,7 @@ I test mostrano il seguente grafico
 
 ![Weak Scaling](img/weak_scaling.png)
 
-####Commenti della weak scaling
+#### Commenti della weak scaling
 Come si può notare dall'immagine sopra riportata, riguardante la weak scaling, possiamo notare come avendo fissato il lavoro per ogni processore all'aumentare delle istanze, e quindi dei processori, il tempo computazionale di esecuzione del programma aumenta, questo è dovuto a problemi di tipo di comunicazione di rete.
 
 ## Author
